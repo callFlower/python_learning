@@ -442,9 +442,17 @@ res.text
           
   obj = C()
   
-  obj.x
-  obj.x = 123
-  del obj.x
+# 获取属性值，会调用 @property 装饰的方法
+print(obj.x)  # 输出: Getting value \n None
+
+# 设置属性值，会调用 @x.setter 装饰的方法
+obj.x = 123   # 输出: Setting value
+
+# 再次获取属性值，会调用 @property 装饰的方法
+print(obj.x)  # 输出: Getting value \n 123
+
+# 删除属性值，会调用 @x.deleter 装饰的方法
+del obj.x     # 输出: Deleting value
   ```
 
 - 方式二，基于定义变量
