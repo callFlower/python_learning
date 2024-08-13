@@ -425,35 +425,35 @@ res.text
 
 - 方式一，基于装饰器
 
-```python
+  ```python
   class C(object):
       
       @property
       def x(self):
-          pass
+	  pass
       
       @x.setter
       def x(self, value):
-          pass
+	  pass
       
       @x.deleter
       def x(self):
-  		pass
-          
+		pass
+	  
   obj = C()
   
-# 获取属性值，会调用 @property 装饰的方法
-print(obj.x)  # 输出: Getting value \n None
+  # 获取属性值，会调用 @property 装饰的方法
+  print(obj.x)  # 输出: Getting value \n None
 
-# 设置属性值，会调用 @x.setter 装饰的方法
-obj.x = 123   # 输出: Setting value
+  # 设置属性值，会调用 @x.setter 装饰的方法
+  obj.x = 123   # 输出: Setting value
 
-# 再次获取属性值，会调用 @property 装饰的方法
-print(obj.x)  # 输出: Getting value \n 123
+  # 再次获取属性值，会调用 @property 装饰的方法
+  print(obj.x)  # 输出: Getting value \n 123
 
-# 删除属性值，会调用 @x.deleter 装饰的方法
-del obj.x     # 输出: Deleting value
-```
+  # 删除属性值，会调用 @x.deleter 装饰的方法
+  del obj.x     # 输出: Deleting value
+  ```
 
 - 方式二，基于定义变量
 
