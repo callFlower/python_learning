@@ -206,6 +206,12 @@ print(Parent.x, Child1.x, Child2.x) # 1 2 1
 
 Parent.x = 3
 print(Parent.x, Child1.x, Child2.x) # 3 2 3
+
+# 实例变量是独立于类变量的，每个实例有自己的实例变量。
+# 修改实例的变量不会影响类变量和其他实例的变量。
+child = Child1()
+child.x = 4
+print(Parent.x, Child1.x, Child2.x) # 3 2 3
 ```
 
 
